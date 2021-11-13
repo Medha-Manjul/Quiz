@@ -1,0 +1,241 @@
+
+<html>
+    <head>
+        <title></title>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <script type="text/javascript">
+        var score=0;
+         function nextone() {
+             if(document.getElementById("opt3").checked==true){
+                score++;
+                swal("Correct Answer","Score:"+score,"success");
+                 document.getElementById("one").style.display="none";
+                 document.getElementById("two").style.display="block";
+                 document.getElementById("three").style.display="none";
+                 document.getElementById("aa").style.display="none";
+                 document.getElementById("bb").style.display="none";
+                }
+             else{
+                 swal("Wrong Answer","Score:"+score,"error");
+             }
+         }
+         function nexttwo() {
+             if(document.getElementById("opt4").checked==true){
+                 score++;
+                 swal("Correct Answer","Score:"+score,"success");
+                 document.getElementById("one").style.display="none";
+                 document.getElementById("two").style.display="none";
+                 document.getElementById("three").style.display="none";
+                 document.getElementById("aa").style.display="block";
+                }
+             else{
+                 swal("Wrong Answer","Score:"+score,"error");
+             }
+         }
+         function next() {
+             if(document.getElementById("opt10").checked==true){
+                 score++;
+                 swal("Correct Answer","Score:"+score,"success");
+                 document.getElementById("one").style.display="none";
+                 document.getElementById("two").style.display="none";
+                 document.getElementById("aa").style.display="none";
+                 document.getElementById("bb").style.display="block";
+                }
+             else{
+                 swal("Wrong Answer","Score:"+score,"error");
+             }
+         } 
+          function nextt() {
+             if(document.getElementById("opt15").checked==true){
+                 score++;
+                 swal("Correct Answer","Score:"+score,"success");
+                 document.getElementById("one").style.display="none";
+                 document.getElementById("two").style.display="none";
+                 document.getElementById("aa").style.display="none";
+                 document.getElementById("bb").style.display="none";
+                 document.getElementById("three").style.display="block";
+                }
+             else{
+                 swal("Wrong Answer","Score:"+score,"error");
+             }
+         }
+         function nextthree() {
+             if(document.getElementById("opt8").checked==true){
+                 score++;
+                 swal("Correct Answer","Score:"+score,"success");
+                 document.getElementById("one").style.display="none";
+                 document.getElementById("two").style.display="none";
+                 document.getElementById("aa").style.display="none";
+                 document.getElementById("bb").style.display="none";
+                 document.getElementById("finalscore").style.display="block";
+                 swal("Correct","Final Score : "+score);
+                 if(score==5){
+                     window.location.href="quiz2.html";
+                 }
+                }
+             else{
+                 swal("Wrong Answer","Score:"+score,"error");
+             }
+         }
+        
+        </script>
+
+
+        <style>
+            body{
+                background-image: url('https://image.freepik.com/free-vector/abstract-colorful-soft-watercolor-texture-background_1035-18958.jpg');background-repeat: no-repeat;background-size: cover;
+              
+            }
+          #one, #two,#three,#aa,#bb{
+                border:5px solid black;
+                width:400px;
+                height:160px;
+                margin-top:200px;
+                margin-left: 400px;
+                padding:25px;
+                background-color: bisque;
+                border-radius: 15px;
+            }
+            button{
+                width:460px;
+                color:white;
+                background-color:purple;
+                margin-left:-29px;
+                height:30px;
+            }
+            label{
+                font-size:18px
+            }
+            #two,#aa,#bb{
+                display:none
+            }
+            #three{
+                display:none;
+                border:5px solid black;
+                width:400px;
+                height:120px;
+                margin-top:200px;
+                margin-left: 400px;
+                padding:25px;
+            }
+            p{
+                font-size:20px
+            }
+         
+            @keyframes abc{
+                from{
+                    width:100%;
+                    height:100%
+                }
+                to{
+                    width:0px;
+                    height:0px
+                }
+            }
+            #a{
+                animation-name:abc ;
+                animation-duration:6s
+            }
+            @keyframes def{
+            from{
+                    width:100%;
+                    height:100%
+                }
+                to{
+                    width:0px;
+                    height:0px
+                }
+            }
+                #b{
+                    animation-delay:5s;
+                animation-name:def;
+                animation-duration:2s
+            } 
+            @keyframes ghi{
+            from{
+                    width:100%;
+                    height:100%
+                }
+                to{
+                    width:0px;
+                    height:0px
+                }
+            }
+                #c{
+                    animation-delay:7s;
+                animation-name:ghi;
+                animation-duration:2s
+            } 
+            @keyframes jkl{
+            from{
+                    width:100%;
+                    height:100%
+                }
+                to{
+                    width:0px;
+                    height:0px
+                }
+            }
+                #d{
+                    animation-delay:9s;
+                animation-name:jkl;
+                animation-duration:2s
+            } 
+        
+        </style>
+    </head>
+    <body>
+        <img src="https://thumbs.dreamstime.com/b/ready-quiz-neon-sign-brick-wall-background-glowing-lettering-ready-quiz-neon-sign-brick-wall-background-219006686.jpg" id="a" width=0px height=0px>
+        <img src="1num.PNG"width=0px height=0px id="b">
+        <img src="2num.PNG"width=0px height=0px id="c">
+        <img src="3num.PNG"width=0px height=0px id="d">
+        <div class="asd" id="one">
+            <P>Ques 1. Where can we add Javascript in an HTML file?</P>
+            <form>
+                <input type="radio" name="option" id="opt1"><label>Inside Head </label><br>
+                <input type="radio" name="option" id="opt2"><label>Inside Body </label><br>
+                <input type="radio" name="option" id="opt3"><label>Anywhere </label><br>
+            </form>
+            <button onclick="nextone()">Next</button>
+        </div>
+        <div class="asd" id="two">
+            <P>Ques 2.How many types of CSS are there?</P>
+            <form>
+                <input type="radio" name="option" id="opt4"><label>3</label><br>
+                <input type="radio" name="option" id="opt5"><label>2 </label><br>
+                <input type="radio" name="option"id="opt6"><label>4</label><br>
+            </form><br>
+            <button onclick="nexttwo()">Next</button>
+        </div>
+        <div id="aa">
+            <p>Ques 3. How do we access HTML elements in javascript?</p>
+            <form>
+                <input type="radio" name="option" id="opt10"><label>getElementById</label><br>
+                <input type="radio" name="option" id="opt11"><label>donotgetElementById</label><br>
+                <input type="radio" name="option"id="opt12"><label>getHTMLelement</label><br>
+            </form>
+            <button onclick="next()">Next</button>
+        </div>
+        <div id="bb">
+            <p>Ques 4. Which of the following is not a tag?</p>
+            <form>
+                <input type="radio" name="option" id="opt13"><label>h6</label><br>
+                <input type="radio" name="option" id="opt14"><label>ol</label><br>
+                <input type="radio" name="option"id="opt15"><label>class</label><br>
+            </form><br>
+            <button onclick="nextt()">Next</button>
+        </div>
+        <div id="three">
+            <p>Ques 5. How do we write background-color in javascript?</p>
+            <form>
+                <input type="radio" name="option" id="opt7"><label>BackgroundColor</label><br>
+                <input type="radio" name="option" id="opt8"><label>backgroundColor </label><br>
+                <input type="radio" name="option"id="opt9"><label>backgroundcolor</label><br>
+            </form>
+            <button onclick="nextthree()">Next</button>
+        </div>
+        <div id="finalscore">
+        </div>
+    </body>
+    </html>
